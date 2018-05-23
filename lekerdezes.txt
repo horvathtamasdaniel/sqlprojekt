@@ -1,0 +1,35 @@
+Vásárló kék füles bögrét keres:
+SELECT colour, price, handle, prsize, stock
+FROM products
+WHERE colour = 'kék' 
+	AND handle <> 0
+
+Mi az ami nincs raktáron?
+SELECT *
+FROM products
+WHERE stock=0
+
+
+Ki rendelt több darab bögrét?
+
+SELECT Customer.name, COUNT(*) AS darab
+FROM orders
+	JOIN customer ON customer.id = orders.customerid
+GROUP BY orders.customerid
+HAVING COUNT(*) > 1
+
+
+Van-e olyan nap amikor több rendelés is volt
+
+SELECT orders.date, COUNT(*) AS darab
+FROM orders
+	JOIN customer ON customer.id = orders.customerid
+GROUP BY orders.date
+HAVING COUNT(*) > 1
+
+Kik és milyen címről rendeltek a Balaton környékéről?
+
+SELECT DISTINCT customer.name, customer.address
+FROM orders
+	JOIN customer ON customer.id = orders.customerid
+WHERE customer.address LIKE '8%'
