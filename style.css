@@ -1,0 +1,42 @@
+body {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}
+
+table {
+    border: 1px solid black;
+}
+
+th,
+td {
+    border: 1px solid black;
+    width: 105px;
+}
+
+h1 {
+    color: green;
+}
+
+h2 {
+    color: brown
+}
+
+#blue {
+    color: blue;
+}
+
+#pink {
+    color: pink;
+}
+
+#red {
+    color: red;
+}
+
+#black {
+    color: black;
+}
+
+#green {
+    color: green;
+}
