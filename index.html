@@ -11,7 +11,17 @@
 </head>
 
 <H1>Mugshop</H1>
-
+<div class="buttons">
+    <input type="button" onclick="kekFules()" value="kekFules" id="button">
+    <input type="button" onclick="nincsKeszlet()" value="nincsKeszlet" id="button">
+    <input type="button" onclick="tobbDarab()" value="tobbDarab" id="button">
+    <input type="button" onclick="tobbRendelesNap()" value="tobbRendelesNap" id="button">
+    <input type="button" onclick="balatonRendeles()" value="balatonRendeles" id="button">
+    <input type="button" onclick="pestifelh()" value="pestifelh" id="button">
+    <input type="button" onclick="termekarak()" value="termekarak" id="button">
+    <input type="button" onclick="rendelesarossz()" value="rendelesarossz" id="button">
+</div>
+<br>
 <h2>Our products:</h2>
 <table align="center">
     <thead>
@@ -115,11 +125,20 @@
         </tr>
     </thead>
 </table>
+<br>
+<div id="content"></div>
+
+<div class="pic">
+    <!-- <img src="mug2.jpg" alt="mug"> -->
+</div>
 
 <body onload="loadContent()">
     <div id="content"></div>
 
     <script src="client.js"></script>
+    <script src="pestifelh.js"></script>
+    <script src="termekarak.js"></script>
+    <script src="rendelesarossz.js"></script>
 </body>
 
 </html>
